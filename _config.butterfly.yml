@@ -1,0 +1,314 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Hexo
+description: ''
+keywords:
+author: John Doe
+language: en
+timezone: ''
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://example.com
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: butterfly
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repository: git@github.com:iyifang/iyifang.github.io.git
+  branch: main
+
+# A simple 404 page
+error_404:
+  enable: true
+  subtitle: "页面沒有找到"
+  background: https://img1.baidu.com/it/u=3023905581,376908618&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500
+
+# 加载动画 Loading Animation
+preloader: true
+
+# 主题配置
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  # 列表||fas fa-list:
+  #   音乐: /music/ || fas fa-music
+  #   电影: /movies/ || fas fa-video
+  # 友链: /link/ || fas fa-link
+  关于: /about/ || fas fa-heart
+
+# 字体配置
+font:
+  global-font-size: 15px
+  code-font-size: 14px
+  font-family: var(--global-font), Consolas_1, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+  code-font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
+
+# 代码配置
+highlight_theme: mac # 代码高亮样式 darker | pale night | light | ocean | mac | mac light
+highlight_copy: true #true 表示可以复制。
+highlight_shrink: true #代码框不展开，需点击 '>' 打开
+code_word_wrap: true #在默认情况下，Hexo 在编译的时候不会实现代码自动换行。如果你不希望在代码块的区域里有横向滚动条的话，那么你可以考虑开启这个功能。
+highlight_height_limit: 230 #可配置代码高度限制，超出的部分会隐藏，并显示展开按钮。 unit: px
+
+# 个人信息
+social:
+  fab fa-github: https://github.com/iyifang/iyifang.github.io || Github
+
+# 头像
+avatar:
+  img: /assets/img/head.jpg
+  effect: false # true则会一直转圈
+
+# 背景图
+background: url(/assets/img/ys.jpg)
+footer_bg: true #footer是否顯示圖片背景(與top_img一致)
+
+# 顶部图
+index_img: /assets/img/ys.jpg
+
+# 图片放大查看
+fancybox: true
+
+# 美化頁面顯示
+beautify:
+  enable: true
+  field: site # site/post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: "#F47466"
+
+# 修改主題配置文件
+theme_color:
+  enable: true
+  main: "#49B1F5"
+  paginator: "#00c4b6"
+  button_hover: "#FF7242"
+  text_selection: "#00c4b6"
+  link_color: "#99a9bf"
+  meta_color: "#858585"
+  hr_color: "#A4D8FA"
+  code_foreground: "#F47466"
+  code_background: "rgba(27, 31, 35, .05)"
+  toc_color: "#00c4b6"
+  blockquote_padding_color: "#49b1f5"
+  blockquote_background_color: "#49b1f5"
+  scrollbar_color: "#49b1f5"
+
+# 页脚设置
+footer:
+  owner:
+    enable: true
+    since: 2020
+  custom_text: 
+  copyright: true # Copyright of theme and framework
+
+# 這個選項是用來顯示文章的相關信息的。
+post_meta:
+  page:
+    date_type: both # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
+    date_format: date # date/relative 顯示日期還是相對日期
+    categories: true # true or false 主頁是否顯示分類
+    tags: true # true or false 主頁是否顯示標籤
+    label: true # true or false 顯示描述性文字
+  post:
+    date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
+    date_format: relative # date/relative 顯示日期還是相對日期
+    categories: true # true or false 文章頁是否顯示分類
+    tags: true # true or false 文章頁是否顯示標籤
+    label: true # true or false 顯示描述性文字
+
+# 是否显示文章封面
+cover:
+  # 是否顯示文章封面
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  # 封面顯示的位置
+  # 三個值可配置 left , right , both
+  position: both
+  # 當沒有設置cover時，默認的封面顯示 【多个地址需要前面带 - 符号】
+  default_cover:
+  - /assets/article/1.jpg
+  - /assets/article/2.jpg
+  - /assets/article/3.jpg
+  - /assets/article/4.jpg
+  - /assets/article/5.jpg
+  - /assets/article/6.jpg
+  - /assets/article/7.jpg
+  - /assets/article/8.jpg
+  - /assets/article/9.jpg
+  - /assets/article/10.jpg
+  - /assets/article/11.jpg
+  - /assets/article/12.jpg
+  - /assets/article/13.jpg
+  - /assets/article/14.jpg
+  - /assets/article/15.jpg
+  - /assets/article/16.jpg
+  - /assets/article/17.jpg
+  - /assets/article/18.jpg
+  - /assets/article/19.jpg
+  - /assets/article/20.jpg
+
+# 文章目录 TOC
+toc:
+  post: true # 文章页是否显示 TOC
+  page: false # 普通页面是否显示 TOC
+  number: true	 # 是否显示章节数
+  expand: false	# 是否展开 TOC
+  style_simple: false # for post 简洁模式（侧边栏只显示 TOC, 只对文章页有效 ）
+
+# Displays outdated notice for a post (文章過期提醒)
+noticeOutdate:
+  enable: true
+  style: flat # style: simple/flat
+  limit_day: 365 # When will it be shown
+  position: top # position: top/bottom
+  message_prev: It has been
+  message_next: days since the last update, the content of the article may be outdated.
+
+
+# 本地搜索
+local_search:
+  enable: true
+  preload: true
+  CDN:
+
+# 鼠标点击
+fireworks:
+  enable: true
+  zIndex: 9999 # -1 or 9999
+  mobile: false
+
+# Mathjax
+mathjax:
+  enable: false
+  per_page: false
+
+# 夜间模式
+darkmode:
+  enable: true
+  # dark mode和 light mode切換按鈕
+  button: true
+  autoChangeMode: 2
+
+# prefetch (預加載)
+instantpage: true
+
+# 图片懒加载
+lazyload:
+  enable: true
+  field: site # site/post 选择在哪些地方启用图片懒加载
+  placeholder: 	# 你自己喜欢的图片
+  blur: true	# 模糊效果
+
+subtitle:
+  enable: true
+  # Typewriter Effect (打字效果)
+  effect: true
+  # loop (循環打字)
+  startDelay: 350 # time before typing starts in milliseconds
+  typeSpeed: 200 # type speed in milliseconds
+  backSpeed: 60 # backspacing speed in milliseconds
+  loop: true
+  # source 調用第三方服務
+  # source: false 關閉調用
+  # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
+  # source: 2  調用一句網（簡體） http://yijuzhan.com/
+  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
+  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  source: false
+  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
+  sub:
+    - "真正的大师永远都怀着一颗学徒的心!🍭🍭🍭"
+    - "世间万物皆有名字，而只有风知道!"
+    - "时光啊，就像潮水，它送来了一切，也会带走一切"
+    - "有时候时间会静止下来，而你能做的，只有观望!✨✨✨"
