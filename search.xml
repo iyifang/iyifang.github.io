@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>git命令</title>
+      <link href="/2022/11/05/git%E5%91%BD%E4%BB%A4/"/>
+      <url>/2022/11/05/git%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-git初始化基本操作"><a href="#1-git初始化基本操作" class="headerlink" title="1.git初始化基本操作"></a>1.git初始化基本操作</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">账号</span><br><span class="line">邮箱</span><br><span class="line">生成key</span><br></pre></td></tr></table></figure><h2 id="1-1git初始化提交代码"><a href="#1-1git初始化提交代码" class="headerlink" title="1.1git初始化提交代码"></a>1.1git初始化提交代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. git add . </span><br><span class="line">2. git commit -m &quot;提交信息&quot;</span><br><span class="line">3. git push -u origin master</span><br></pre></td></tr></table></figure><h2 id="1-2git切换远程仓库"><a href="#1-2git切换远程仓库" class="headerlink" title="1.2git切换远程仓库"></a>1.2git切换远程仓库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 直接修改远程仓库</span><br><span class="line">    git remote set-url origin 新的远程仓库地址</span><br><span class="line">2. 先删除后添加</span><br><span class="line">    a. 删除 git remote rm origin</span><br><span class="line">    b. 添加 git remote add origin 新的远程仓库地址</span><br></pre></td></tr></table></figure><h2 id="1-3git基本命令"><a href="#1-3git基本命令" class="headerlink" title="1.3git基本命令"></a>1.3git基本命令</h2><table><thead><tr><th>序号</th><th>功能</th><th>命令</th></tr></thead><tbody><tr><td>1</td><td>拉取远程代码</td><td>git git pull</td></tr><tr><td>2</td><td>查看本地分支</td><td>git branch</td></tr><tr><td>3</td><td>查看远程分支</td><td>git branch -r</td></tr><tr><td>4</td><td>查看所有分支</td><td>git branch -a</td></tr><tr><td>5</td><td>创建本地分支</td><td>git branch  branchName</td></tr><tr><td>6</td><td>建立本地分支与远程分支的联系</td><td>git branch –set-upstream-to=origin/&lt; branch &gt; feture-test</td></tr><tr><td>7</td><td>重命名分支</td><td>git branch -m old new / git branch -M old new</td></tr><tr><td>8</td><td>删除本地分支</td><td>git branch -a</td></tr><tr><td>9</td><td>删除远程分支</td><td>git branch -d -r branchname</td></tr><tr><td>10</td><td>查看在你上次提交之后是否有对文件进行再次修改</td><td>git status</td></tr><tr><td>11</td><td>删除远程分支</td><td>git add .</td></tr><tr><td>12</td><td>删除远程分支</td><td>git commit -m</td></tr><tr><td>13</td><td>将远程仓库origin的master分支与本地仓库master分支关联</td><td>git push -u origin master</td></tr><tr><td>13</td><td>提交代码</td><td>git push</td></tr></tbody></table><h2 id="2-git配置忽略文件"><a href="#2-git配置忽略文件" class="headerlink" title="2.git配置忽略文件"></a>2.git配置忽略文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. Git Bash进入命令行，输入touch .gitignore，生成.gitignore文件。</span><br><span class="line">2. 添加以下内容</span><br><span class="line">    // .gitignore文件</span><br><span class="line">    node_modules/</span><br><span class="line">    dist/</span><br></pre></td></tr></table></figure><blockquote><p>以斜杠“/”开头表示目录；<br>以星号“*”通配多个字符；<br>以问号“?”通配单个字符；<br>以方括号“[]”包含单个字符的匹配列表；<br>以叹号“!”表示不忽略(跟踪)匹配到的文件或目录</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>butterfly主题配置</title>
+      <link href="/2022/11/04/2022-11-04/"/>
+      <url>/2022/11/04/2022-11-04/</url>
+      
+        <content type="html"><![CDATA[<h2 id="butterfly主题配置"><a href="#butterfly主题配置" class="headerlink" title="butterfly主题配置"></a>butterfly主题配置</h2><ol><li>文章和其他菜单页面顶部透明背景配置,在页面的顶部添加：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## title</span><br><span class="line">top_img: transparent </span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Butterfly2主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一篇文章</title>
       <link href="/2022/10/29/2022-10-29/"/>
       <url>/2022/10/29/2022-10-29/</url>
@@ -67,6 +105,17 @@
     
     
     <entry>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
@@ -79,19 +128,19 @@
     
     <entry>
       <title></title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[/* 文章页H1-H6图标样式效果 *//* 控制风车转动速度 4s那里可以自己调节快慢 */h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {  -webkit-animation: ccc 4s linear infinite;  animation: ccc 4s linear infinite;}/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */@-webkit-keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}/* 设置风车颜色 */#content-inner.layout h1::before {  color: #ef50a8;  margin-left: -1.55rem;  font-size: 1.3rem;  margin-top: -0.23rem;}#content-inner.layout h2::before {  color: #fb7061;  margin-left: -1.35rem;  font-size: 1.1rem;  margin-top: -0.12rem;}#content-inner.layout h3::before {  color: #ffbf00;  margin-left: -1.22rem;  font-size: 0.95rem;  margin-top: -0.09rem;}#content-inner.layout h4::before {  color: #a9e000;  margin-left: -1.05rem;  font-size: 0.8rem;  margin-top: -0.09rem;}#content-inner.layout h5::before {  color: #57c850;  margin-left: -0.9rem;  font-size: 0.7rem;  margin-top: 0rem;}#content-inner.layout h6::before {  color: #5ec1e0;  margin-left: -0.9rem;  font-size: 0.66rem;  margin-top: 0rem;}/* s设置风车hover动效 6s那里可以自己调节快慢*/#content-inner.layout h1:hover,#content-inner.layout h2:hover,#content-inner.layout h3:hover,#content-inner.layout h4:hover,#content-inner.layout h5:hover,#content-inner.layout h6:hover {  color: var(--theme-color);}#content-inner.layout h1:hover::before,#content-inner.layout h2:hover::before,#content-inner.layout h3:hover::before,#content-inner.layout h4:hover::before,#content-inner.layout h5:hover::before,#content-inner.layout h6:hover::before {  color: var(--theme-color);  -webkit-animation: ccc 6s linear infinite;  animation: ccc 6s linear infinite;}]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>link</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title></title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
