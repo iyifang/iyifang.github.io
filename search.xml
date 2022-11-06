@@ -4,12 +4,43 @@
   
     
     <entry>
+      <title>主题美化</title>
+      <link href="/2022/11/06/%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/"/>
+      <url>/2022/11/06/%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-1安装3D小人"><a href="#1-1安装3D小人" class="headerlink" title="1.1安装3D小人"></a>1.1安装3D小人</h2><ol><li><p>使用管理员权限打开终端输入安装命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure></li><li><p>打开配置文件_config.yml添加一下配置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># 3D小人</span><br><span class="line">## https://github.com/EYHN/hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  enable: true #开关插件版看板娘</span><br><span class="line">  scriptFrom: local # 默认</span><br><span class="line">  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets/ # 模型文件相对与插件根目录路径</span><br><span class="line">  # scriptFrom: jsdelivr # jsdelivr CDN</span><br><span class="line">  # scriptFrom: unpkg # unpkg CDN</span><br><span class="line">  # scriptFrom: https://npm.elemecdn.com/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url</span><br><span class="line">  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br><span class="line">  debug: false # 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu # npm-module package name</span><br><span class="line">    # use: wanko # 博客根目录/live2d_models/ 下的目录名</span><br><span class="line">    # use: ./wives/wanko # 相对于博客根目录的路径</span><br><span class="line">    # use: https://npm.elemecdn.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url</span><br><span class="line">  display:</span><br><span class="line">    position: left #控制看板娘位置</span><br><span class="line">    width: 150 #控制看板娘大小</span><br><span class="line">    height: 300 #控制看板娘大小</span><br><span class="line">  mobile:</span><br><span class="line">    show: false # 手机中是否展示</span><br></pre></td></tr></table></figure></li><li><p>保存后输入运行命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">或者 hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li></ol><h3 id="1-2换其他小人"><a href="#1-2换其他小人" class="headerlink" title="1.2换其他小人"></a>1.2换其他小人</h3><ol><li>终端命令安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save live2d-widget-model-koharu</span><br></pre></td></tr></table></figure></li><li>找到_config.yml配置下的model修改模型<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">  use: live2d-widget-model-koharu</span><br></pre></td></tr></table></figure></li><li>同上重新运行命令</li></ol><h2 id="1-3卸载看板娘"><a href="#1-3卸载看板娘" class="headerlink" title="1.3卸载看板娘"></a>1.3卸载看板娘</h2><ol><li>根目录打开终端输入：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-helper-live2d #卸载看板娘插件</span><br><span class="line">npm uninstall live2d-widget-model-modelname #卸载看板娘模型。记得替换modelname为看板娘名称</span><br></pre></td></tr></table></figure></li></ol><h2 id="2-1-安装电子钟"><a href="#2-1-安装电子钟" class="headerlink" title="2.1 安装电子钟"></a>2.1 安装电子钟</h2><ol><li>打开终端运行安装命令<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-butterfly-clock-anzhiyu --save</span><br></pre></td></tr></table></figure></li><li>添加配置信息<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># electric_clock</span><br><span class="line"># see https://anzhiy.cn/posts/fc18.html</span><br><span class="line">electric_clock:</span><br><span class="line">enable: true # 开关</span><br><span class="line">priority: 5 #过滤器优先权</span><br><span class="line">enable_page: all # 应用页面</span><br><span class="line">exclude:</span><br><span class="line">  # - /posts/</span><br><span class="line">  # - /about/</span><br><span class="line">layout: # 挂载容器类型</span><br><span class="line">  type: class</span><br><span class="line">  name: sticky_layout</span><br><span class="line">  index: 0</span><br><span class="line">loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义</span><br><span class="line">clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css</span><br><span class="line">clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js</span><br><span class="line">ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0</span><br><span class="line">qweather_key: # 和风天气key</span><br><span class="line">gaud_map_key: # 高得地图web服务key</span><br><span class="line">default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气</span><br><span class="line">rectangle: 112.982279,28.19409 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 主题美化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 主题美化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git命令</title>
       <link href="/2022/11/05/git%E5%91%BD%E4%BB%A4/"/>
       <url>/2022/11/05/git%E5%91%BD%E4%BB%A4/</url>
       
         <content type="html"><![CDATA[<h1 id="1-git初始化基本操作"><a href="#1-git初始化基本操作" class="headerlink" title="1.git初始化基本操作"></a>1.git初始化基本操作</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">账号</span><br><span class="line">邮箱</span><br><span class="line">生成key</span><br></pre></td></tr></table></figure><h2 id="1-1git初始化提交代码"><a href="#1-1git初始化提交代码" class="headerlink" title="1.1git初始化提交代码"></a>1.1git初始化提交代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. git add . </span><br><span class="line">2. git commit -m &quot;提交信息&quot;</span><br><span class="line">3. git push -u origin master</span><br></pre></td></tr></table></figure><h2 id="1-2git切换远程仓库"><a href="#1-2git切换远程仓库" class="headerlink" title="1.2git切换远程仓库"></a>1.2git切换远程仓库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 直接修改远程仓库</span><br><span class="line">    git remote set-url origin 新的远程仓库地址</span><br><span class="line">2. 先删除后添加</span><br><span class="line">    a. 删除 git remote rm origin</span><br><span class="line">    b. 添加 git remote add origin 新的远程仓库地址</span><br></pre></td></tr></table></figure><h2 id="1-3git基本命令"><a href="#1-3git基本命令" class="headerlink" title="1.3git基本命令"></a>1.3git基本命令</h2><table><thead><tr><th>序号</th><th>功能</th><th>命令</th></tr></thead><tbody><tr><td>1</td><td>拉取远程代码</td><td>git git pull</td></tr><tr><td>2</td><td>查看本地分支</td><td>git branch</td></tr><tr><td>3</td><td>查看远程分支</td><td>git branch -r</td></tr><tr><td>4</td><td>查看所有分支</td><td>git branch -a</td></tr><tr><td>5</td><td>创建本地分支</td><td>git branch  branchName</td></tr><tr><td>6</td><td>建立本地分支与远程分支的联系</td><td>git branch –set-upstream-to=origin/&lt; branch &gt; feture-test</td></tr><tr><td>7</td><td>重命名分支</td><td>git branch -m old new / git branch -M old new</td></tr><tr><td>8</td><td>删除本地分支</td><td>git branch -a</td></tr><tr><td>9</td><td>删除远程分支</td><td>git branch -d -r branchname</td></tr><tr><td>10</td><td>查看在你上次提交之后是否有对文件进行再次修改</td><td>git status</td></tr><tr><td>11</td><td>删除远程分支</td><td>git add .</td></tr><tr><td>12</td><td>删除远程分支</td><td>git commit -m</td></tr><tr><td>13</td><td>将远程仓库origin的master分支与本地仓库master分支关联</td><td>git push -u origin master</td></tr><tr><td>13</td><td>提交代码</td><td>git push</td></tr></tbody></table><h2 id="2-git配置忽略文件"><a href="#2-git配置忽略文件" class="headerlink" title="2.git配置忽略文件"></a>2.git配置忽略文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. Git Bash进入命令行，输入touch .gitignore，生成.gitignore文件。</span><br><span class="line">2. 添加以下内容</span><br><span class="line">    // .gitignore文件</span><br><span class="line">    node_modules/</span><br><span class="line">    dist/</span><br></pre></td></tr></table></figure><blockquote><p>以斜杠“/”开头表示目录；<br>以星号“*”通配多个字符；<br>以问号“?”通配单个字符；<br>以方括号“[]”包含单个字符的匹配列表；<br>以叹号“!”表示不忽略(跟踪)匹配到的文件或目录</p></blockquote>]]></content>
       
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
       
       
         <tags>
@@ -33,7 +64,7 @@
       
         <tags>
             
-            <tag> Butterfly2主题 </tag>
+            <tag> Butterfly主题 </tag>
             
         </tags>
       
@@ -42,7 +73,7 @@
     
     
     <entry>
-      <title>第一篇文章</title>
+      <title>MD语法</title>
       <link href="/2022/10/29/2022-10-29/"/>
       <url>/2022/10/29/2022-10-29/</url>
       
@@ -52,7 +83,7 @@
       
         <tags>
             
-            <tag> 测试标签 </tag>
+            <tag> MD语法 </tag>
             
         </tags>
       
@@ -61,17 +92,17 @@
     
     
     <entry>
-      <title>第二篇文章</title>
+      <title>主题配置遇到的一些问题</title>
       <link href="/2022/10/29/2022-10-31/"/>
       <url>/2022/10/29/2022-10-31/</url>
       
-        <content type="html"><![CDATA[<h2 id="这是我的第二篇文章"><a href="#这是我的第二篇文章" class="headerlink" title="这是我的第二篇文章"></a>这是我的第二篇文章</h2><p><strong>来了老妹儿</strong></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-尝试重新运行"><a href="#1-尝试重新运行" class="headerlink" title="1.尝试重新运行"></a>1.尝试重新运行</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><h2 id="2-部分页面配置了top-img-transparent还是会显示蓝底-在-config-butterfly-yml配置"><a href="#2-部分页面配置了top-img-transparent还是会显示蓝底-在-config-butterfly-yml配置" class="headerlink" title="2.部分页面配置了top_img: transparent还是会显示蓝底,在_config.butterfly.yml配置"></a>2.部分页面配置了top_img: transparent还是会显示蓝底,在_config.butterfly.yml配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_top_img: transparent</span><br></pre></td></tr></table></figure><h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2>]]></content>
       
       
       
         <tags>
             
-            <tag> 测试标签 </tag>
+            <tag> 配置问题 </tag>
             
         </tags>
       
@@ -94,9 +125,42 @@
     
     
     <entry>
+      <title>归档</title>
+      <link href="/archives/index.html"/>
+      <url>/archives/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 文章页H1-H6图标样式效果 *//* 控制风车转动速度 4s那里可以自己调节快慢 */h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {  -webkit-animation: ccc 4s linear infinite;  animation: ccc 4s linear infinite;}/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */@-webkit-keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}/* 设置风车颜色 */#content-inner.layout h1::before {  color: #ef50a8;  margin-left: -1.55rem;  font-size: 1.3rem;  margin-top: -0.23rem;}#content-inner.layout h2::before {  color: #fb7061;  margin-left: -1.35rem;  font-size: 1.1rem;  margin-top: -0.12rem;}#content-inner.layout h3::before {  color: #ffbf00;  margin-left: -1.22rem;  font-size: 0.95rem;  margin-top: -0.09rem;}#content-inner.layout h4::before {  color: #a9e000;  margin-left: -1.05rem;  font-size: 0.8rem;  margin-top: -0.09rem;}#content-inner.layout h5::before {  color: #57c850;  margin-left: -0.9rem;  font-size: 0.7rem;  margin-top: 0rem;}#content-inner.layout h6::before {  color: #5ec1e0;  margin-left: -0.9rem;  font-size: 0.66rem;  margin-top: 0rem;}/* s设置风车hover动效 6s那里可以自己调节快慢*/#content-inner.layout h1:hover,#content-inner.layout h2:hover,#content-inner.layout h3:hover,#content-inner.layout h4:hover,#content-inner.layout h5:hover,#content-inner.layout h6:hover {  color: var(--theme-color);}#content-inner.layout h1:hover::before,#content-inner.layout h2:hover::before,#content-inner.layout h3:hover::before,#content-inner.layout h4:hover::before,#content-inner.layout h5:hover::before,#content-inner.layout h6:hover::before {  color: var(--theme-color);  -webkit-animation: ccc 6s linear infinite;  animation: ccc 6s linear infinite;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {  background: linear-gradient(    -45deg,    #e8d8b9,    #eccec5,    #a3e9eb,    #bdbdf0,    #eec1ea  );  box-shadow: 0 0 5px rgb(66, 68, 68);  position: relative;  background-size: 400% 400%;  -webkit-animation: Gradient 10s ease infinite;  -moz-animation: Gradient 10s ease infinite;  animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@-moz-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}/* 个人信息Follow me按钮 */#aside-content > .card-widget.card-info > #card-info-btn {  background-color: #3eb8be;  border-radius: 8px;}/* 页脚与头图透明 */#footer {  background: transparent !important;}#page-header {  background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {  background: transparent !important;}#page-header::before {  background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {  background: transparent !important;}[data-theme="dark"] #page-header::before {  background: transparent !important;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -117,28 +181,6 @@
     
     <entry>
       <title></title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 文章页H1-H6图标样式效果 *//* 控制风车转动速度 4s那里可以自己调节快慢 */h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {  -webkit-animation: ccc 4s linear infinite;  animation: ccc 4s linear infinite;}/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */@-webkit-keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}/* 设置风车颜色 */#content-inner.layout h1::before {  color: #ef50a8;  margin-left: -1.55rem;  font-size: 1.3rem;  margin-top: -0.23rem;}#content-inner.layout h2::before {  color: #fb7061;  margin-left: -1.35rem;  font-size: 1.1rem;  margin-top: -0.12rem;}#content-inner.layout h3::before {  color: #ffbf00;  margin-left: -1.22rem;  font-size: 0.95rem;  margin-top: -0.09rem;}#content-inner.layout h4::before {  color: #a9e000;  margin-left: -1.05rem;  font-size: 0.8rem;  margin-top: -0.09rem;}#content-inner.layout h5::before {  color: #57c850;  margin-left: -0.9rem;  font-size: 0.7rem;  margin-top: 0rem;}#content-inner.layout h6::before {  color: #5ec1e0;  margin-left: -0.9rem;  font-size: 0.66rem;  margin-top: 0rem;}/* s设置风车hover动效 6s那里可以自己调节快慢*/#content-inner.layout h1:hover,#content-inner.layout h2:hover,#content-inner.layout h3:hover,#content-inner.layout h4:hover,#content-inner.layout h5:hover,#content-inner.layout h6:hover {  color: var(--theme-color);}#content-inner.layout h1:hover::before,#content-inner.layout h2:hover::before,#content-inner.layout h3:hover::before,#content-inner.layout h4:hover::before,#content-inner.layout h5:hover::before,#content-inner.layout h6:hover::before {  color: var(--theme-color);  -webkit-animation: ccc 6s linear infinite;  animation: ccc 6s linear infinite;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
       
@@ -149,7 +191,7 @@
     
     
     <entry>
-      <title>tags</title>
+      <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
       
