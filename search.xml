@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>从零构建vue2(2)项目</title>
+      <link href="/2022/12/21/front/%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BAvue2%E9%A1%B9%E7%9B%AE(2)/"/>
+      <url>/2022/12/21/front/%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BAvue2%E9%A1%B9%E7%9B%AE(2)/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>element2官网: <a href="https://element.eleme.cn/#/zh-CN">https://element.eleme.cn/#/zh-CN</a></p></blockquote><h1 id="按需引入element"><a href="#按需引入element" class="headerlink" title="按需引入element"></a>按需引入element</h1><h2 id="安装element，选择按需导入"><a href="#安装element，选择按需导入" class="headerlink" title="安装element，选择按需导入"></a>安装element，选择按需导入</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add element</span><br></pre></td></tr></table></figure><h2 id="根目录下添加babel-config-js文件"><a href="#根目录下添加babel-config-js文件" class="headerlink" title="根目录下添加babel.config.js文件"></a>根目录下添加babel.config.js文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    &quot;@vue/cli-plugin-babel/preset&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [</span><br><span class="line">    [</span><br><span class="line">      &quot;component&quot;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;libraryName&quot;: &quot;element-ui&quot;,</span><br><span class="line">        &quot;styleLibraryName&quot;: &quot;theme-chalk&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="新建src-plugins-element-js文件"><a href="#新建src-plugins-element-js文件" class="headerlink" title="新建src/plugins/element.js文件"></a>新建src/plugins/element.js文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import &#123;</span><br><span class="line">  Button</span><br><span class="line">&#125; from &#x27;element-ui&#x27;</span><br><span class="line"></span><br><span class="line">Vue.use(Button)</span><br></pre></td></tr></table></figure><h2 id="main-js引入"><a href="#main-js引入" class="headerlink" title="main.js引入"></a>main.js引入</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#x27;./plugins/element.js&#x27;</span><br><span class="line">import &quot;element-ui/lib/theme-chalk/index.css&quot; //element样式文件必须引入</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo博客部署到腾讯云服务器</title>
       <link href="/2022/11/28/blog/hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
       <url>/2022/11/28/blog/hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
